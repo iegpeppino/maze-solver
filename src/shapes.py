@@ -12,7 +12,8 @@ class Line():
         canvas.create_line(self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=color, width=2)
 
 class Cell():
-    def __init__(self,win):
+    def __init__(self,win= None):
+        # Win is defaulted to None, otherwise tests failed
         self._x1 = None
         self._x2 = None
         self._y1 = None

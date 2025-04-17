@@ -1,4 +1,4 @@
-from shapes import Cell
+from .shapes import Cell
 import time
 
 class Maze():
@@ -10,7 +10,8 @@ class Maze():
             num_cols,
             cell_size_x,
             cell_size_y,
-            win
+            # Default win to None, otherwise tests fail
+            win= None
     ):
         self._x1 = x1
         self._y1 = y1
