@@ -1,5 +1,4 @@
 from tkinter import Tk, BOTH, Canvas
-from shapes import Line, Point
 
 class Window():
     def __init__(self, width, height):
