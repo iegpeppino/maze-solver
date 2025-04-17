@@ -1,5 +1,3 @@
-from window import Window
-
 class Point():
     def __init__(self, x, y):
         self.x = x
@@ -12,7 +10,7 @@ class Line():
     
     def draw(self, canvas, color="black"):
         canvas.create_line(self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=color, width=2)
-    
+
 class Cell():
     def __init__(self,win):
         self._x1 = None
@@ -25,7 +23,7 @@ class Cell():
         self.has_bottom_wall = True
         self._win = win
 
-    def draw(self, x1, x2, y1, y2):
+    def draw(self, x1, y1, x2, y2):
         if self._win is None:
             return
         # Overwrite class variables to avoid NoneType error
@@ -33,7 +31,7 @@ class Cell():
         self._x2 = x2
         self._y1 = y1
         self._y2 = y2
-        w = self._win
+        # w = self._win
 
         if self.has_left_wall:
             line = Line(Point(x1, y1), Point(x1, y2))
