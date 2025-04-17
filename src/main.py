@@ -13,7 +13,7 @@ def main():
     win = Window(SCREEN_X, SCREEN_Y)
 
     maze = Maze(MARGIN, MARGIN, NUM_ROWS, NUM_COLS, CELL_SIZE_X, CELL_SIZE_y, win)
-
+    
     win.wait_for_close()
 
 if __name__ == "__main__":
