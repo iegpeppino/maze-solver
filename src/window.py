@@ -25,7 +25,4 @@ class Window():
         self.__running = False
 
     def draw_line(self, line, color="black"):
-        # x1, y1 = line.p1.x, line.p1.y
-        # x2, y2 = line.p2.x, line.p2.y
-        # return self.__canvas.create_line(x1, y1, x2, y2)
         line.draw(self.__canvas, color)
