@@ -22,6 +22,7 @@ class Cell():
         self.has_right_wall = True
         self.has_top_wall = True
         self.has_bottom_wall = True
+        self.visited = False
         self._win = win
 
     def draw(self, x1, y1, x2, y2, color="black"):
@@ -58,7 +59,7 @@ class Cell():
         else:
             line = Line(Point(x1, y2), Point(x2, y2))
             self._win.draw_line(line, "white")
-            
+
     def draw_move(self, to_cell, undo=False):
         color = "gray"
         if undo:
